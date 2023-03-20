@@ -9,9 +9,5 @@ const checkboxGroup = document.querySelectorAll(`.interests_active`);
 
 function choiceAll() {
   const interest = this.closest(`.interest`).querySelectorAll(`.interest__check`);
-  this.checked ? searchChecked(interest, true) : searchChecked(interest, false);
-}
-
-function searchChecked(checkboxes, isCheck) {
-  checkboxes.forEach(checkbox => {checkbox.checked = isCheck})
+  interest.forEach(checkbox => {checkbox.checked = this.checked});
 }
